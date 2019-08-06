@@ -1,5 +1,6 @@
 <template>
   <el-menu
+    :collapse="asideCollapse"
     :unique-opened="true"
     background-color="#3e3f4a"
     text-color="#d0d0d0"
@@ -93,7 +94,11 @@ export default {
       }]
     }
   },
-  computed: {},
+  computed: {
+    asideCollapse () {
+      return this.$store.state.asideCollapse
+    }
+  },
   methods: {
     openMenu (index) {
       console.log(index)
@@ -103,4 +108,6 @@ export default {
 </script>
 
 <style scoped lang="stylus">
+.el-menu--collapse
+  width 64px !important
 </style>
