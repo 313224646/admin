@@ -1,0 +1,18 @@
+// 字体高度和dom高度
+font-height(num)
+  height unit(num, px)
+  line-height unit(num, px)
+
+// 多行文本省略
+omitted(line)
+  overflow hidden
+  display -webkit-box
+  -webkit-line-clamp line
+  -webkit-box-orient vertical
+
+// 单行文本省略
+truncate-text(width = 100%)
+  overflow hidden
+  white-space nowrap
+  text-overflow ellipsis
+  width width

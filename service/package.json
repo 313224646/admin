@@ -1,0 +1,16 @@
+{
+  "name": "service",
+  "author": "Wu",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "serve": "node app.js"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0"
+  },
+  "devDependencies": {}
+}

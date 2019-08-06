@@ -1,0 +1,33 @@
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form {
+  margin: 0;
+}
+
+ol, li, ul {
+  margin: 0; 
+  padding: 0;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+[hidden] {
+  display: none;
+}

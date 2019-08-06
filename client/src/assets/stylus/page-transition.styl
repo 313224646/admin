@@ -1,0 +1,50 @@
+// 左滑
+.slide-left-enter-active {
+  transition: all .3s cubic-bezier(.17,.63,.43,.98);
+}
+.slide-left-leave-active {
+  transition: all .3s cubic-bezier(.7,.11,.42,.89);
+}
+
+// 右滑
+.slide-right-enter-active {
+  transition: all .3s cubic-bezier(.17,.63,.43,.98);
+}
+.slide-right-leave-active {
+  transition: all .3s cubic-bezier(.7,.11,.42,.89);
+}
+
+// 第一次进入
+.refresh-enter-active {
+  transition: all .3s cubic-bezier(.7,.11,.42,.89);
+}
+
+.slide-left-enter-to, .slide-right-enter-to {
+  width: 100vw !important;
+  position: fixed;
+  top 0
+  left 0
+  z-index 0
+}
+
+.slide-left-enter {
+  position: fixed;
+  opacity: 1;
+  transform: translateX(100vh);
+}
+.slide-right-enter {
+  position: fixed;
+  opacity: 1;
+  transform: translateX(-100vh);
+}
+
+.refresh-enter {
+  opacity: 0;
+}
+
+.slide-left-leave-to {
+  opacity: 0;
+}
+.slide-right-leave-to {
+  opacity: 0;
+}
