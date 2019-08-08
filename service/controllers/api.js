@@ -4,8 +4,13 @@ const APIError = require('../rest').APIError
 
 module.exports = {
   'POST /api/login': async (ctx, next) => {
-    ctx.rest(users.login(ctx.request.body.username, ctx.request.body.password))
-  } ,
+    const token = users.login(ctx.request.body.username, ctx.request.body.password)
+    if (token) {
+      ctx.rest(token)
+    } else {
+      throw new APIError('login:not_found_user', 'account password is wrong.')
+    }
+  },
   'GET /api/products': async (ctx, next) => {
     ctx.rest({
       products: products.getProducts()

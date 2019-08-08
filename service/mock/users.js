@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken')
+const imageToBase64 = require('../imageToBase64')
 
 let id = 0
 function nextId() {
@@ -6,14 +7,15 @@ function nextId() {
   return 'p' + id
 }
 
-function User (username, password) {
+function User (username, password, avatarPath) {
   this.id = nextId()
   this.username = username
   this.password = password
+  this.avatarPath = avatarPath
 }
 
 let users = [
-  new User('admin', 'admin')
+  new User('admin', 'admin', '/assets/avatar/0.jpg')
 ]
 
 module.exports = {
@@ -22,10 +24,16 @@ module.exports = {
       return item.username === username && item.password === password
     })
     if (result) {
-      return jwt.sign({
+      let token = jwt.sign({
         username: result.username,
         id: result.id
       }, 'user_token', { expiresIn: '2h' })
+      let avatar = imageToBase64(result.avatarPath)
+      return {
+        username: result.username,
+        token,
+        avatar
+      }
     } else {
       return null
     }

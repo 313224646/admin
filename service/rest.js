@@ -15,7 +15,7 @@ module.exports = {
           ctx.response.body = data
         }
         try {
-          await next();
+          await next()
         } catch (e) {
           // 返回错误:
           ctx.response.status = 400
