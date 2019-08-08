@@ -4,7 +4,7 @@ const mimeType = require('mime-types')
 
 // 读取图片文件转换为 base64 编码
 module.exports = (file) => {
-  let filePath = path.resolve(__dirname + file) // 原始文件地址
+  let filePath = path.resolve(__dirname, '..', '.' + file) // 原始文件地址
   let fileMimeType = mimeType.lookup(filePath) // 获取文件的 memeType
 
   // 如果不是图片文件，则退出

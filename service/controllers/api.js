@@ -1,6 +1,6 @@
 const products = require('../mock/products')
 const users = require('../mock/users')
-const APIError = require('../rest').APIError
+const APIError = require('../middleware/rest').APIError
 
 module.exports = {
   'POST /api/login': async (ctx, next) => {

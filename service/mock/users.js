@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken')
-const imageToBase64 = require('../imageToBase64')
+const imageToBase64 = require('../tool/imageToBase64')
 
 let id = 0
 function nextId() {

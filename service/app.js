@@ -2,8 +2,8 @@ const Koa = require('koa')
 
 const app = new Koa()
 const bodyParser = require('koa-bodyparser')
-const controller = require('./controller')
-const rest = require('./rest')
+const controller = require('./middleware/controller')
+const rest = require('./middleware/rest')
 
 // log request URL:
 app.use(async (ctx, next) => {
