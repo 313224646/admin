@@ -108,6 +108,6 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-.el-menu--collapse
-  width 64px !important
+.el-menu
+  border 0
 </style>
