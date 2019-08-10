@@ -28,7 +28,7 @@
         </el-form-item>
         <el-form-item>
           <el-checkbox v-model="form.autoLogin">自动登陆</el-checkbox>
-          <router-link to="/" class="text-hover">忘记密码</router-link>
+          <router-link to="/login" class="text-hover">忘记密码</router-link>
         </el-form-item>
         <el-form-item>
           <el-button class="login-btn" type="primary" size="medium" @click="login">登 录</el-button>
@@ -62,14 +62,10 @@ export default {
   methods: {
     login () {
       if (this.form.username && this.form.password) {
-        this.$http.post('/api/login', {
+        this.$store.dispatch('getUser', {
           username: this.form.username,
           password: this.form.password
-        }).then(
-          res => {
-            console.log(res)
-          }
-        )
+        })
       }
     }
   },

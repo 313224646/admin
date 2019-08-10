@@ -25,8 +25,7 @@ export default {
     }
   },
   methods: {},
-  created () {},
-  mounted () {}
+  beforeCreate () {}
 }
 </script>
 

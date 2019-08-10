@@ -1,16 +1,7 @@
 const products = require('../mock/products')
-const users = require('../mock/users')
 const APIError = require('../middleware/rest').APIError
 
 module.exports = {
-  'POST /api/login': async (ctx, next) => {
-    const token = users.login(ctx.request.body.username, ctx.request.body.password)
-    if (token) {
-      ctx.rest(token)
-    } else {
-      throw new APIError('login:not_found_user', 'account password is wrong.')
-    }
-  },
   'GET /api/products': async (ctx, next) => {
     ctx.rest({
       products: products.getProducts()

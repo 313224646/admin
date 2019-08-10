@@ -19,7 +19,7 @@ axios.interceptors.request.use(
 // 全局响应拦截器
 axios.interceptors.response.use(
   res => {
-    return(res.data)
+    return res.data
   }, 
   err => {
     const response = err.response.data
