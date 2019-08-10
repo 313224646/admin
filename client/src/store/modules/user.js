@@ -30,13 +30,11 @@ const actions = {
   },
   async verifyUser ({ state }) { // 验证token是否过期
     const token = state.user.token || await localforage.getItem('token')
-    axios.post('/api/verify', { token }).then(
-      res => {}
-    ).catch(
-      err => {
-        router.push('/login') // 过期或者无效统一回到登陆页
-      }
-    )
+    try {
+      await axios.post('/api/verify', { token })
+    } catch (error) {
+      router.push('/login') // 过期或者无效统一回到登陆页
+    }
   }
 }
 const getters = {}

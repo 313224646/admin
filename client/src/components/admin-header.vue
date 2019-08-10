@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <div @click="$store.commit('asideCollapseToggle')" class="icon-wrap cursor"><i :class="asideCollapse"></i></div>
+    <div @click="$store.commit('asideCollapseToggle')" class="icon-wrap icon-wrap--normal cursor"><i :class="asideCollapse"></i></div>
     <el-breadcrumb class="el-breadcrumb">
       <el-breadcrumb-item>首页</el-breadcrumb-item>
       <el-breadcrumb-item>活动列表</el-breadcrumb-item>
@@ -9,11 +9,11 @@
     <div class="header-right">
       <el-input class="header-right-search" v-model="search" placeholder="搜索..."></el-input>
       <el-tooltip effect="dark" content="没有日志或异常" placement="bottom">
-        <div class="icon-wrap cursor"><i class="el-icon-monitor cursor"></i></div>
+        <div class="icon-wrap icon-wrap--small cursor"><i class="el-icon-monitor cursor"></i></div>
       </el-tooltip>
-      <div class="icon-wrap cursor"><i class="el-icon-full-screen cursor"></i></div>
-      <div class="icon-wrap cursor"><i class="el-icon-bell cursor"></i></div>
-      <div class="icon-wrap cursor"><i class="el-icon-more cursor"></i></div>
+      <div class="icon-wrap icon-wrap--small cursor"><i class="el-icon-full-screen cursor"></i></div>
+      <div class="icon-wrap icon-wrap--small cursor"><i class="el-icon-bell cursor"></i></div>
+      <div class="icon-wrap icon-wrap--small cursor"><i class="el-icon-more cursor"></i></div>
     </div>
   </div>
 </template>
@@ -46,10 +46,13 @@ export default {
   &:hover
     background-color #f8f8f9
 .icon-wrap
-  width 64px
   text-align center
   font-size 20px
   color #6e7482
+.icon-wrap--normal
+  width 64px
+.icon-wrap--small
+  width 44px
 .header
   display flex
   .el-breadcrumb

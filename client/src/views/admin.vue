@@ -46,11 +46,14 @@ export default {
     flex auto
     margin-left 256px
     transition margin-left .3s ease
+    min-width 650px
+    min-height 100vh
     .admin-main-header
       position fixed
       top 0
       right 0
       left 256px
+      min-width 650px
       height 64px
       line-height 64px
       box-shadow 0 1px 4px rgba(0,21,41,.08)
