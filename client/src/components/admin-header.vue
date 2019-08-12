@@ -30,9 +30,12 @@ export default {
   computed: {
     asideCollapse () {
       return this.$store.state.asideCollapse ? 'el-icon-s-unfold' : 'el-icon-s-fold'
+    },
+    user () {
+      return this.$store.state.user.user
     }
   },
-  methods: {},
+  methods: {},  
   created () {},
   mounted () {},
   activated () {}

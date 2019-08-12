@@ -2,7 +2,7 @@ import Vue from 'vue'
 import axios from 'axios'
 import { Message } from 'element-ui'
 
-axios.defaults.baseURL = 'http://192.168.0.110:3000' // 全局设置请求前缀
+axios.defaults.baseURL = 'http://localhost:3000' // 全局设置请求前缀
 
 Vue.prototype.$http = axios // 设置别名
 
